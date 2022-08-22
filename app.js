@@ -118,9 +118,10 @@ headerH1.after(nav)
 const ul = document.createElement("ul");
 nav.append(ul)
 
+// store our text values in an array
 const navValues = ["Home", "About", "Contact", "Reviews"]
 
-
+//since the li and a tags are fairly similar we can use a for loop for dynamic coding
 for(let i = 0; i < 4; i++){
     const li = document.createElement("li")
    ul.append(li)
@@ -128,9 +129,13 @@ for(let i = 0; i < 4; i++){
    anchor.setAttribute("href", "#")
 
    li.append(anchor)
+
+   //we can loop through our array to add the appropriate text
    anchor.textContent = navValues[i]
 }
 
 bagsProductLi.classList.add("group");
 // bagsProductLi.classList.remove("group");
+
+//toggle will add the class if the element does not have it or remove the tag if it already exists
 // bagsProductLi.classList.toggle("group")
