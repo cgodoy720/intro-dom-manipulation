@@ -89,7 +89,7 @@ ol {
     text-align: center;
     /* border: 2px solid hotpink; */
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 ol li {
