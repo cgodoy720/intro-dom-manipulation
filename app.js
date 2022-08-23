@@ -1,5 +1,9 @@
 // console.log('Hello world')
 
+//////////////////////////////////////
+///////// Selecting Elements /////////
+//////////////////////////////////////
+
 // Query Selector
 // console.log( document.querySelector('.container') )
 
@@ -66,6 +70,9 @@ const aside = document.querySelector('aside li')
 // console.log(aside)
 // aside.remove()
 
+//////////////////////////////////////
+//// Creating & Updating Elements ////
+//////////////////////////////////////
 
 
 const group = document.querySelectorAll('.group')
@@ -140,6 +147,10 @@ bagsProductLi.classList.add("group");
 //toggle will add the class if the element does not have it or remove the tag if it already exists
 // bagsProductLi.classList.toggle("group")
 
+
+//////////////////////////////////////
+///////////// Events /////////////////
+//////////////////////////////////////
 
 
 const h1 = document.querySelector('h1')
