@@ -104,7 +104,7 @@ orderedList.append(bagsProductLi);
 
 const header = document.createElement("header");
 // const divContainer = document.querySelector("div.container")
-container.prepend(header)
+// container.prepend(header)
 
 const headerH1 = document.createElement("h1");
 header.append(headerH1)
@@ -139,3 +139,123 @@ bagsProductLi.classList.add("group");
 
 //toggle will add the class if the element does not have it or remove the tag if it already exists
 // bagsProductLi.classList.toggle("group")
+
+
+
+const h1 = document.querySelector('h1')
+// console.log(h1)
+
+const reviews = document.querySelector('#reviews')
+// const reviews = document.getElementById('reviews')
+// console.log(reviews)
+
+// h1.textContent = "Manipulating the DOM"
+
+// Updating the style of an element using JS
+// Dot into the 'style' property
+// h1.style.color = "cyan"
+
+// Any properties that are multiple words must be camelCased in JS
+// h1.style.backgroundColor = `black`
+
+
+// Logging the style property
+// console.log(h1.style)
+
+// .addEventListener gets added to an element
+// takes two arguments:
+// - first argument is the event we're listening for
+// - second argument is the callback function that will fire
+// when the event is triggered
+
+// h1.addEventListener("click", () => {
+//     // console.log('I have been clicked')
+
+//     if(h1.innerText === "DOM Manipulation"){
+//         // textContent
+//         h1.innerText = "Manipulating the DOM"
+
+//         // color
+//         h1.style.color = "purple"
+
+//         // background color
+//         h1.style.backgroundColor = "black"
+
+//         //font family
+//         h1.style.fontFamily = "Helvetica"
+
+//     } else {
+//         h1.innerText = "DOM Manipulation"
+//         h1.style.color = "black"
+//         h1.style.backgroundColor = "lightgrey"
+//         h1.style.fontFamily = "Quicksand"
+//     }
+
+
+//     // color for reviews
+//     reviews.style.color = "pink"
+
+//     // document.body.style.backgroundColor = "green"
+// })
+
+
+// Defining a function to be the event handler
+
+const myFunc = () => {
+    h1.classList.toggle('newClass')
+}
+// Referencing the function (instead of an anonymous function)
+// h1.addEventListener("click", myFunc)
+
+
+// Same code as 204-208, written differently, using anonymous function
+h1.addEventListener('click', () => {
+    h1.classList.toggle('newClass')
+})
+
+
+// Event Object
+const anchor = document.querySelector('a')
+// console.log(anchor)
+
+anchor.addEventListener('click', (e) => {
+    // e.preventDefault() will stop any default behavior from happening
+    e.preventDefault()
+    console.log(e)
+})
+
+
+const form = document.querySelector('form')
+// console.log(form)
+
+form.addEventListener('click', (event) => {
+    // Will log the event object
+    console.log(event)
+
+    // Will log the TARGET that we clicked on
+    // console.log(event.target)
+
+    if(event.target.tagName === 'INPUT'){
+        console.log('you clicked on an input')
+    } else if(event.target.tagName === "TEXTAREA"){
+        console.log('you clicked on a textarea')
+    }
+
+    // if(event.target.placeholder === "name"){
+    //     console.log('you clicked on the NAME input')
+    // }
+})
+
+
+const lis = document.querySelectorAll('li')
+// console.log(lis)
+
+// Iterating over a NodeList and adding an event listener to each element
+lis.forEach((list) => {
+    list.addEventListener("click", (event) => {
+        event.preventDefault()
+        // console.log(event)
+        // Using event.target to pull our innerText to use in console.log
+        console.log(`You clicked on ${event.target.innerText}`)
+    })
+})

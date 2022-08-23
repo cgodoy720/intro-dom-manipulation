@@ -179,3 +179,10 @@ footer {
         align-content: center;
     }
 }
+
+
+.newClass {
+    font-family:'Lucida Sans';
+    color: red;
+    background-color: aquamarine;
+}
